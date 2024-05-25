@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider} from 'react-router-dom'
 
 import './index.css'
 
@@ -8,6 +8,7 @@ import './index.css'
 import Signin from './routes/Signin.tsx'
 import Profile from './routes/Profile.tsx'
 import Home from './routes/Home.tsx'
+import Register from './routes/Register.tsx'
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,11 @@ const router = createBrowserRouter([
   {
     path: '/profile',
     element: <Profile />,
+  },
+
+  {
+    path: '/Register',
+    element: <Register />,
   },
 ])
 

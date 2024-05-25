@@ -1,14 +1,18 @@
-import { AiOutlineMail, AiOutlineLock } from 'react-icons/ai';
+import { AiOutlineMail, AiOutlineLock } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Signin = () => {
   return (
     <main className="flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-14">
-      <img src="/logo/logo-acheie.svg" alt="Logo Achei-e" className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/6" />
+      <img
+        src="/logo/logo-acheie.svg"
+        alt="Logo Achei-e"
+        className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/6"
+      />
 
       <div className="flex flex-col gap-10 items-center justify-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/6">
-        
         <div className="flex items-center border-b-[1px] border-[#bdbdbd] w-full">
-          <AiOutlineMail className='text-2xl'/>
+          <AiOutlineMail className="text-2xl" />
           <input
             type="text"
             className="w-full outline-none placeholder:text-gray-300 p-2"
@@ -17,7 +21,7 @@ const Signin = () => {
         </div>
 
         <div className="flex items-center border-b-[1px] border-[#bdbdbd] w-full">
-          <AiOutlineLock className='text-2xl'/>
+          <AiOutlineLock className="text-2xl" />
           <input
             type="text"
             className="w-full outline-none placeholder:text-gray-300 p-2"
@@ -25,12 +29,24 @@ const Signin = () => {
           />
         </div>
 
-        <span className="text-[#00000] font-bold">Esqueci minha senha</span>  
-    
+        <span className="text-[#00000] font-bold">Esqueci minha senha</span>
+
         <div className="flex flex-col items-center justify-center gap-5 w-full">
-          <button className="bg-[#1D8BC9] w-full p-3 rounded-full text-xl text-white font-semibold outline-none border-none">Entrar</button>
-          <span className="text-[#00000] font-bold">Ainda não possui uma conta?</span>
-          <button className="bg-[#1D8BC9] w-full p-3 rounded-full text-xl text-white font-semibold outline-none border-none">Cadastre-se</button>
+          <Link to="/Home" className=" w-full">
+            <button className="bg-[#1D8BC9] w-full p-3 rounded-full text-xl text-white font-semibold outline-none border-none hover:bg-[#38779c] transition-all duration-300">
+              Entrar
+            </button>
+          </Link>
+
+          <span className="text-[#00000] font-bold">
+            Ainda não possui uma conta?
+          </span>
+
+          <Link to="/Register" className=" w-full">
+            <button className="bg-[#1D8BC9] w-full p-3 rounded-full text-xl text-white font-semibold outline-none border-none hover:bg-[#38779c] transition-all duration-300">
+              Cadastre-se
+            </button>
+          </Link>
         </div>
       </div>
     </main>
