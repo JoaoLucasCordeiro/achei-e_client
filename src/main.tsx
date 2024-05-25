@@ -9,6 +9,7 @@ import Signin from './routes/Signin.tsx'
 import Profile from './routes/Profile.tsx'
 import Home from './routes/Home.tsx'
 import Register from './routes/Register.tsx'
+import NewItem from './routes/NewItem.tsx'
 
 const router = createBrowserRouter([
   {
@@ -25,8 +26,13 @@ const router = createBrowserRouter([
   },
 
   {
-    path: '/Register',
+    path: '/register',
     element: <Register />,
+  },
+
+  {
+    path: '/newitem',
+    element: <NewItem />,
   },
 ])
 

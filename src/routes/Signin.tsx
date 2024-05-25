@@ -42,7 +42,7 @@ const Signin = () => {
             Ainda não possui uma conta?
           </span>
 
-          <Link to="/Register" className=" w-full">
+          <Link to="/register" className=" w-full">
             <button className="bg-[#1D8BC9] w-full p-3 rounded-full text-xl text-white font-semibold outline-none border-none hover:bg-[#38779c] transition-all duration-300">
               Cadastre-se
             </button>
