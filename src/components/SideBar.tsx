@@ -3,7 +3,7 @@ const SideBar = () => {
   return (
     <nav className="flex flex-col items-center justify-center px-20">
       <img
-        src="/public/logo/logo-acheie.svg"
+        src="/logo/logo-acheie.svg"
         alt="Logo Achei-e"
         className="w-[200px]"
       />
