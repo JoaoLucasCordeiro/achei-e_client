@@ -1,12 +1,9 @@
-import CardUser from "../components/CardUser";
-import SideBar from "../components/SideBar";
 import {
   AiOutlineUser,
   AiOutlineMail,
   AiOutlineLock,
   AiOutlinePhone,
   AiOutlineBook,
-  AiOutlineEdit,
   AiFillCamera,
 } from "react-icons/ai";
 

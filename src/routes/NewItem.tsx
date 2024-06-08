@@ -1,5 +1,4 @@
 import CardUser from "../components/CardUser";
-import CardPost from "../components/CardPost";
 import SideBar from "../components/SideBar";
 import {
   AiOutlineCalendar,
