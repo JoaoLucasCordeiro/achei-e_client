@@ -16,7 +16,7 @@ const CardPost = ({ imageUrl, altText, title, description, lostBy, date, status 
         <img
           src={imageUrl}
           alt={altText}
-          className="w-[250px] h-[250px] rounded-3xl"
+          className="w-[220px] h-[220px] rounded-3xl"
         />
       </div>
       {/* descrição do item */}

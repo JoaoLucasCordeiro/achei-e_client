@@ -10,7 +10,7 @@ const Home = () => {
       </div>
      
       <div className="flex flex-col items-center w-[60vw] h-screen mb-10">
-      <h1 className="mr-[55%] text-5xl font-bold ">Home</h1>
+      <h1 className="mr-[55%] text-5xl font-bold mt-[3rem]">Home</h1>
         {/* card post */}
         <CardPost
           imageUrl="public/items/item.jpeg"
