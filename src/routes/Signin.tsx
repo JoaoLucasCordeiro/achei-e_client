@@ -11,14 +11,14 @@ const Signin = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-  
+
     const data = {
       email,
       senha: password,
     };
-  
-    console.log('Sending data:', data);
-  
+
+    console.log("Sending data:", data);
+
     try {
       const response = await fetch(
         "https://achei-e-ef3b03158fb0.herokuapp.com/achei-e/login",
@@ -30,12 +30,15 @@ const Signin = () => {
           },
         }
       );
-  
+
       const responseData = await response.json();
-  
-      console.log('Server response:', responseData);
-  
+
+      console.log("Server response:", responseData);
+
       if (response.ok) {
+        const token = responseData.token;
+        const payload = JSON.parse(atob(token.split(".")[1]));
+        console.log("User ID:", payload.sub);
         toast.success("Login realizado com sucesso!");
         navigate("/home");
       } else {
@@ -56,7 +59,10 @@ const Signin = () => {
       />
 
       <div className="flex flex-col gap-10 items-center justify-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/6">
-        <form onSubmit={handleSubmit} className="flex flex-col items-center justify-center gap-10">
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col items-center justify-center gap-10"
+        >
           <div className="flex items-center border-b-[1px] border-[#bdbdbd] w-full">
             <AiOutlineMail className="text-2xl" />
             <input
@@ -79,7 +85,10 @@ const Signin = () => {
             />
           </div>
 
-          <button type="submit" className="bg-[#1D8BC9] w-[320px] p-3 rounded-full text-xl text-white font-semibold outline-none border-none hover:bg-[#38779c] transition-all duration-300">
+          <button
+            type="submit"
+            className="bg-[#1D8BC9] w-[320px] p-3 rounded-full text-xl text-white font-semibold outline-none border-none hover:bg-[#38779c] transition-all duration-300"
+          >
             Entrar
           </button>
 
@@ -94,8 +103,9 @@ const Signin = () => {
           </Link>
         </form>
 
-        <span className="text-[#000000] font-bold mb-10">Esqueci minha senha</span>
-
+        <span className="text-[#000000] font-bold mb-10">
+          Esqueci minha senha
+        </span>
       </div>
       <ToastContainer />
     </main>
