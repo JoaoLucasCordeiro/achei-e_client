@@ -7,6 +7,7 @@ import {
   AiOutlineEdit,
   AiFillCamera,
 } from "react-icons/ai";
+import profileImage from "../../public/women.jpg";
 
 const NewItem = () => {
   return (
@@ -86,14 +87,7 @@ const NewItem = () => {
 
         <div className="flex flex-col items-center gap-5">
           <CardUser
-            imageUrl="public/women.jpg"
-            altText="Usuário do Achei-e"
-            name="Maria Silva"
-            course="Engenharia De Software"
-          />
-
-          <CardUser
-            imageUrl="public/women.jpg"
+            imageUrl={profileImage}
             altText="Usuário do Achei-e"
             name="Maria Silva"
             course="Engenharia De Software"

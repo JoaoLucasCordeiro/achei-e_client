@@ -66,13 +66,6 @@ const Profile = () => {
             name="Maria Silva"
             course="Engenharia De Software"
           />
-
-          <CardUser
-            imageUrl={profileImage}
-            altText="Usuário do Achei-e"
-            name="Maria Silva"
-            course="Engenharia De Software"
-          />
         </div>
       </div>
     </main>
