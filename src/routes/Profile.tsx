@@ -1,7 +1,9 @@
 import CardUser from "../components/CardUser";
 import SideBar from "../components/SideBar";
 import { AiOutlineWhatsApp } from "react-icons/ai";
-import CardProfileItem from "../components/CardProfileItem";
+
+// images
+import profileImage from "../../public/women.jpg";
 
 const Profile = () => {
   return (
@@ -17,7 +19,7 @@ const Profile = () => {
           <div className="flex flex-col w-[50vw] h-screen gap-5">
             <div className="flex items-center gap-10 ml-[8%] mt-10">
               <img
-                src="public/women.jpg"
+                src={profileImage}
                 alt="Usuário"
                 className="w-[200px] h-[200px] rounded-full"
               />
@@ -34,34 +36,20 @@ const Profile = () => {
             </div>
 
             <div className="flex items-center justify-center gap-5">
-              <button className="bg-[#D9D9D9] hover:bg-[#1D8BC9] hover:text-white rounded-3xl p-1 w-[120px] font-bold text-[#5B5B5B] transition-all duration-300">Perdidos</button>
-              <button className="bg-[#D9D9D9] hover:bg-[#1D8BC9] hover:text-white rounded-3xl p-1 w-[120px] font-bold text-[#5B5B5B] transition-all duration-300">Achados</button>
-              <button className="bg-[#D9D9D9] hover:bg-[#1D8BC9] hover:text-white rounded-3xl p-1 w-[120px] font-bold text-[#5B5B5B] transition-all duration-300">Editar Perfil</button>
+              <button className="bg-[#D9D9D9] hover:bg-[#1D8BC9] hover:text-white rounded-3xl p-1 w-[120px] font-bold text-[#5B5B5B] transition-all duration-300">
+                Perdidos
+              </button>
+              <button className="bg-[#D9D9D9] hover:bg-[#1D8BC9] hover:text-white rounded-3xl p-1 w-[120px] font-bold text-[#5B5B5B] transition-all duration-300">
+                Achados
+              </button>
+              <button className="bg-[#D9D9D9] hover:bg-[#1D8BC9] hover:text-white rounded-3xl p-1 w-[120px] font-bold text-[#5B5B5B] transition-all duration-300">
+                Editar Perfil
+              </button>
             </div>
 
             <div className="flex items-center flex-wrap gap-2 justify-center">
-              <CardProfileItem
-                imageUrl="public/items/item.jpeg"
-                altText="Item perdido"
-                title="Garrafa Térmica"
-                description="Olá pessoal, eu perdi uma garrafa semelhante a essa na UPE..."
-                lostBy="Maria"
-                date="10/05/2024"
-                status="Item perdido"
-              />
-               <CardProfileItem
-                imageUrl="public/items/item.jpeg"
-                altText="Item perdido"
-                title="Garrafa Térmica"
-                description="Olá pessoal, eu perdi uma garrafa semelhante a essa na UPE..."
-                lostBy="Maria"
-                date="10/05/2024"
-                status="Item perdido"
-              />
-
-              
+              <h1 className="text-3xl text-[#1D8BC9] font-bold text-center mt-4">Nenhum post</h1>
             </div>
-
           </div>
         </div>
       </div>
@@ -73,14 +61,14 @@ const Profile = () => {
 
         <div className="flex flex-col items-center gap-5">
           <CardUser
-            imageUrl="public/women.jpg"
+            imageUrl={profileImage}
             altText="Usuário do Achei-e"
             name="Maria Silva"
             course="Engenharia De Software"
           />
 
           <CardUser
-            imageUrl="public/women.jpg"
+            imageUrl={profileImage}
             altText="Usuário do Achei-e"
             name="Maria Silva"
             course="Engenharia De Software"

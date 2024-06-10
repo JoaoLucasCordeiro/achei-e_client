@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 
 // imagem default em caso de não ter foto do item
 import defaultImage from "../../public/deafult-img-photo.svg";
+import profileImage from "../../public/women.jpg";
+
 
 interface User {
   nome: string;
@@ -69,14 +71,14 @@ const Home = () => {
 
         <div className="flex flex-col items-center gap-5">
           <CardUser
-            imageUrl="public/women.jpg"
+             imageUrl={profileImage}
             altText="Usuário do Achei-e"
             name="Maria Silva"
             course="Engenharia De Software"
           />
 
           <CardUser
-            imageUrl="public/women.jpg"
+            imageUrl={profileImage}
             altText="Usuário do Achei-e"
             name="Maria Silva"
             course="Engenharia De Software"
