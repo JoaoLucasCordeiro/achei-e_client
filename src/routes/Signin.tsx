@@ -37,13 +37,18 @@ const Signin = () => {
 
       if (response.ok) {
         const token = responseData.token;
+        const idUsuario = responseData.idUsuario; 
+      
+        localStorage.setItem('token', token);
+        localStorage.setItem('idUsuario', idUsuario);
+      
         const payload = JSON.parse(atob(token.split(".")[1]));
-        console.log("User ID:", payload.sub);
+        console.log("User ID:", payload.sub); 
         toast.success("Login realizado com sucesso!");
         navigate("/home");
       } else {
         toast.error("Algo deu errado. Por favor, tente novamente.");
-      }
+      } 
     } catch (error) {
       console.error("Erro ao tentar fazer login:", error);
       toast.error("Algo deu errado. Por favor, tente novamente.");
@@ -67,7 +72,7 @@ const Signin = () => {
             <AiOutlineMail className="text-2xl" />
             <input
               type="text"
-              className="w-full outline-none placeholder:text-gray-300 p-2"
+              className="w-full outline-none placeholder:text-gray-300 p-2 bg-transparent"
               placeholder="Digite seu email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -78,7 +83,7 @@ const Signin = () => {
             <AiOutlineLock className="text-2xl" />
             <input
               type="password"
-              className="w-full outline-none placeholder:text-gray-300 p-2"
+              className="w-full outline-none placeholder:text-gray-300 p-2 bg-transparent"
               placeholder="Digite sua senha"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -86,7 +91,7 @@ const Signin = () => {
           </div>
 
           <button
-            type="submit"
+            type="submit"  
             className="bg-[#1D8BC9] w-[320px] p-3 rounded-full text-xl text-white font-semibold outline-none border-none hover:bg-[#38779c] transition-all duration-300"
           >
             Entrar

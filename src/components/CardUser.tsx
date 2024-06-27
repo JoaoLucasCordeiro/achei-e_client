@@ -7,7 +7,7 @@ type CardUserProps = {
   
   const CardUser = ({ imageUrl, altText, name, course }: CardUserProps) => {
     return (
-      <div className="flex flex-col items-center justify-center bg-[#D9D9D9] w-[240px] rounded-3xl p-4 cursor-pointer">
+      <div className="flex flex-col items-center justify-center bg-[#ebebeb] w-[240px] rounded-3xl p-4 cursor-pointer">
         <div className="flex items-center gap-2 w-full">
           <img
             src={imageUrl}
