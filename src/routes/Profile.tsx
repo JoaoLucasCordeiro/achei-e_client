@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import CardUser from "../components/CardUser";
 import SideBar from "../components/SideBar";
 import { AiOutlineWhatsApp } from "react-icons/ai";
