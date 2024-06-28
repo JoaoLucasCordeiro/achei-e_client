@@ -105,15 +105,15 @@ const NewItem = () => {
 
   return (
     <main className="flex">
-      <div className="border-r-[1px] border-[#1D8BC9] h-screen w-[20vw]">
+      <div className="md:w-[20vw] border-r-[1px] border-[#1D8BC9] h-screen">
         <SideBar />
       </div>
 
       <div className="flex flex-col items-center w-[60vw] h-screen">
-        <h1 className="mr-[55%] text-5xl font-bold mt-[3rem]">Novo Item</h1>
+        <h1 className="sm:mr-[55%] mr-0 text-5xl font-bold mt-[3rem]">Novo Item</h1>
 
         <div className="flex items-center justify-around w-full">
-          <div className="flex flex-col w-[50vw] h-screen gap-5">
+          <div className="flex flex-col sm:w-[50vw] w-screen h-screen gap-5 sm:ml-0 ml-[8%]">
             <div className="flex flex-col items-center justify-center mt-10 cursor-pointer">
               <div className="flex flex-col items-center justify-center gap-5">
                 {!previewImage ? (
@@ -242,7 +242,7 @@ const NewItem = () => {
         </div>
       </div>
 
-      <div className="border-l-[1px] border-[#1D8BC9] h-screen w-[20vw] flex flex-col items-center">
+      <div className="hidden md:flex md:w-[20vw] border-l-[1px] border-[#1D8BC9] h-screen flex-col items-center">
         <h2 className="text-[#1D8BC9] text-xl font-bold text-center mt-[30%] mb-5">
           Essas pessoas podem te ajudar
         </h2>
