@@ -21,14 +21,18 @@ const Profile = () => {
         .then(response => response.json())
         .then(data => {
           const base64Prefix = "data:image/jpeg;base64,";
-          const foto = data.foto.startsWith('/9j/') ? base64Prefix + data.foto : data.foto;
+          let foto = data.foto;
+          
+          if (foto && foto.startsWith('/9j/')) {
+            foto = base64Prefix + foto;
+          }
 
           setUserData({
             nome: data.nome,
             sobrenome: data.sobrenome,
             curso: data.curso.replace('_', ' ').toLowerCase(),
             telefone: data.telefone,
-            foto,
+            foto: foto || '',  // Define como uma string vazia se a foto for null
           });
         })
         .catch(error => {
