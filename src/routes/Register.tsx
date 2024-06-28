@@ -96,17 +96,17 @@ const Register = () => {
   return (
     <main className="flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-14">
       <ToastContainer />
-      <h1 className="mr-[37%] text-5xl font-bold mt-[10rem]">Cadastre-se</h1>
+      <h1 className="sm:mr-[37%] mr-0 text-5xl font-bold sm:mt-[3rem] mt-5">Cadastre-se</h1>
 
-      <div className="flex items-center justify-around w-full">
-        <div className="flex flex-col w-[50vw] h-screen gap-10">
+      <div className="flex items-center justify-center w-full">
+        <div className="flex flex-col sm:w-[50vw] w-full h-screen gap-10 px-8">
           <div className="flex flex-col items-center justify-center mt-10 cursor-pointer">
             <div className="flex flex-col items-center justify-center">
               {previewImage ? (
                 <img
                   src={previewImage}
                   alt="Preview"
-                  className="w-[200px] h-[200px] rounded-xl"
+                  className="w-[160px] h-[160px] rounded-full"
                 />
               ) : (
                 <AiFillCamera size={150} />
@@ -130,7 +130,7 @@ const Register = () => {
             <AiOutlineUser size={24} />
             <input
               type="text"
-              className="w-full outline-none bg-transparent placeholder:text-gray-300 p-2"
+               className="w-full outline-none placeholder:text-gray-300 p-2 bg-transparent"
               placeholder="Digite seu nome"
               value={nome}
               onChange={(e) => setNome(e.target.value)}
@@ -141,7 +141,7 @@ const Register = () => {
             <AiOutlineUser size={24} />
             <input
               type="text"
-              className="w-full outline-none bg-transparent placeholder:text-gray-300 p-2"
+              className="w-full outline-none placeholder:text-gray-300 p-2 bg-transparent"
               placeholder="Digite seu sobrenome"
               value={sobrenome}
               onChange={(e) => setSobrenome(e.target.value)}
@@ -152,7 +152,7 @@ const Register = () => {
             <AiOutlineMail size={24} />
             <input
               type="email"
-              className="w-full outline-none bg-transparent placeholder:text-gray-300 p-2"
+             className="w-full outline-none placeholder:text-gray-300 p-2 bg-transparent"
               placeholder="Digite seu email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -163,7 +163,7 @@ const Register = () => {
             <AiOutlineLock size={24} />
             <input
               type="password"
-              className="w-full outline-none bg-transparent placeholder:text-gray-300 p-2"
+              className="w-full outline-none placeholder:text-gray-300 p-2 bg-transparent"
               placeholder="Digite sua senha"
               value={senha}
               onChange={(e) => setSenha(e.target.value)}
