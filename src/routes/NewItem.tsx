@@ -109,11 +109,11 @@ const NewItem = () => {
         <SideBar />
       </div>
 
-      <div className="flex flex-col items-center w-[60vw] h-screen">
+      <div className="flex flex-col items-center w-full h-screen">
         <h1 className="sm:mr-[55%] mr-0 text-5xl font-bold mt-[3rem]">Novo Item</h1>
 
-        <div className="flex items-center justify-around w-full">
-          <div className="flex flex-col sm:w-[50vw] w-screen h-screen gap-5 sm:ml-0 ml-[8%]">
+        <div className="flex flex-col items-center justify-around w-full">
+          <div className="flex flex-col sm:w-[50vw] w-screen h-screen gap-5 px-8">
             <div className="flex flex-col items-center justify-center mt-10 cursor-pointer">
               <div className="flex flex-col items-center justify-center gap-5">
                 {!previewImage ? (
