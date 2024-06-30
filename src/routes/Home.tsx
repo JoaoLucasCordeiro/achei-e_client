@@ -1,11 +1,9 @@
-import CardUser from "../components/CardUser";
 import CardPost from "../components/CardPost";
 import SideBar from "../components/SideBar";
 import { useEffect, useState } from "react";
 
 // imagem default em caso de não ter foto do item
 import defaultImage from "../../public/deafult-img-photo.svg";
-import profileImage from "../../public/women.jpg";
 
 interface User {
   nome: string;

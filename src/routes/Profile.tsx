@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
-import CardUser from "../components/CardUser";
 import SideBar from "../components/SideBar";
 import { AiOutlineWhatsApp } from "react-icons/ai";
-import profileImage from "../../public/women.jpg";
 import { FaUser } from "react-icons/fa";
 
 const Profile = () => {

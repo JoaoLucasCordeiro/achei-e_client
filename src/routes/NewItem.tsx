@@ -1,4 +1,3 @@
-import CardUser from "../components/CardUser";
 import SideBar from "../components/SideBar";
 import {
   AiOutlineCalendar,
@@ -7,7 +6,6 @@ import {
   AiOutlineEdit,
   AiFillCamera,
 } from "react-icons/ai";
-import profileImage from "../../public/women.jpg";
 import { ChangeEvent, FormEvent, useState } from "react";
 
 interface Item {
