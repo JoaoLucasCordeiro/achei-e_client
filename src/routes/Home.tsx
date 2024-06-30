@@ -45,9 +45,11 @@ const Home = () => {
     const fetchPosts = async () => {
       setLoading(true);
       try {
-        const response = await fetch(`https://achei-e-ef3b03158fb0.herokuapp.com/achei-e/posts?page=${currentPage}`);
+        const response = await fetch(
+          `https://achei-e-ef3b03158fb0.herokuapp.com/achei-e/posts?page=${currentPage}`
+        );
         if (!response.ok) {
-          throw new Error('Failed to fetch posts');
+          throw new Error("Failed to fetch posts");
         }
         const data = await response.json();
         if (data.length === 0) {
@@ -57,7 +59,7 @@ const Home = () => {
           setCurrentPage(currentPage + 1); // Incrementa a página atual
         }
       } catch (error) {
-        console.error('Error fetching posts:', error);
+        console.error("Error fetching posts:", error);
       } finally {
         setLoading(false);
       }
@@ -78,9 +80,11 @@ const Home = () => {
   const fetchPosts = async () => {
     setLoading(true);
     try {
-      const response = await fetch(`https://achei-e-ef3b03158fb0.herokuapp.com/achei-e/posts?page=${currentPage}`);
+      const response = await fetch(
+        `https://achei-e-ef3b03158fb0.herokuapp.com/achei-e/posts?page=${currentPage}`
+      );
       if (!response.ok) {
-        throw new Error('Failed to fetch posts');
+        throw new Error("Failed to fetch posts");
       }
       const data = await response.json();
       if (data.length === 0) {
@@ -90,7 +94,7 @@ const Home = () => {
         setCurrentPage(currentPage + 1); // Incrementa a página atual
       }
     } catch (error) {
-      console.error('Error fetching posts:', error);
+      console.error("Error fetching posts:", error);
     } finally {
       setLoading(false);
     }
@@ -109,7 +113,7 @@ const Home = () => {
         <h1 className="mr-[65%] text-5xl font-bold mt-[3rem]">Home</h1>
         {posts.map((post) => {
           let imageUrl = post.item.foto ? post.item.foto : defaultImage;
-          if (imageUrl.startsWith('/9j/')) {
+          if (imageUrl.startsWith("/9j/")) {
             imageUrl = `data:image/jpeg;base64,${imageUrl}`;
           }
           return (
@@ -129,20 +133,24 @@ const Home = () => {
         {!hasMore && <p>Não há mais posts para carregar.</p>}
       </div>
 
-      <div className="hidden md:flex md:w-[20vw] border-l-[1px] border-[#1D8BC9] h-screen flex-col items-center">
-        <h2 className="text-[#1D8BC9] text-xl font-bold text-center mt-[30%] mb-5">
-          Essas pessoas podem te ajudar
-        </h2>
+      <div className="hidden md:flex md:w-[20vw] border-l-[1px] border-[#1D8BC9]  flex-col items-center">
+        <img
+          src="/logo/logo-acheie.svg"
+          alt="Logo do Achei-e"
+          className="w-[150px] h-[150px]"
+        />
 
-        <div className="flex flex-col items-center gap-5">
-          <CardUser
-            imageUrl={profileImage}
-            altText="Usuário do Achei-e"
-            name="Maria Silva"
-            course="Engenharia De Software"
-          />
-        </div>
-      </div>  
+        <p className="text-base text-black text-center">
+          Olá, esse é o <span className="font-bold">Achei-</span>
+          <span className="text-[#1D8BC9] font-bold">e</span> plataforma de
+          achados e perdidos voltada para alunos da UPE campus Garanhuns, para
+          saber mais, clique no botão abaixo.
+        </p>
+
+        <button className="text-base p-1 bg-[#1D8BC9] rounded-3xl text-white px-2 mt-2">
+          Saber Mais
+        </button>
+      </div>
     </main>
   );
 };

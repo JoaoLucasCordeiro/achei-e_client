@@ -49,7 +49,7 @@ const Profile = () => {
         <SideBar />
       </div>
 
-      <div className="flex flex-col items-center w-[60vw] h-screen">
+      <div className="flex flex-col items-center md:w-[60vw] h-screen mb-10 overflow-y-auto">
         <h1 className="mr-[55%] text-5xl font-bold mt-[3rem]">Perfil</h1>
 
         <div className="flex items-center justify-around w-full">
@@ -100,19 +100,23 @@ const Profile = () => {
         </div>
       </div>
 
-      <div className="hidden md:flex md:w-[20vw] border-l-[1px] border-[#1D8BC9] h-screen flex-col items-center">
-        <h2 className="text-[#1D8BC9] text-xl font-bold text-center mt-[30%] mb-5">
-          Essas pessoas podem te ajudar
-        </h2>
+      <div className="hidden md:flex md:w-[20vw] border-l-[1px] border-[#1D8BC9]  flex-col items-center">
+        <img
+          src="/logo/logo-acheie.svg"
+          alt="Logo do Achei-e"
+          className="w-[150px] h-[150px]"
+        />
 
-        <div className="flex flex-col items-center gap-5">
-          <CardUser
-            imageUrl={profileImage}
-            altText="Usuário do Achei-e"
-            name="Maria Silva"
-            course="Engenharia De Software"
-          />
-        </div>
+        <p className="text-base text-black text-center">
+          Olá, esse é o <span className="font-bold">Achei-</span>
+          <span className="text-[#1D8BC9] font-bold">e</span> plataforma de
+          achados e perdidos voltada para alunos da UPE campus Garanhuns, para
+          saber mais, clique no botão abaixo.
+        </p>
+
+        <button className="text-base p-1 bg-[#1D8BC9] rounded-3xl text-white px-2 mt-2">
+          Saber Mais
+        </button>
       </div>
     </main>
   );
