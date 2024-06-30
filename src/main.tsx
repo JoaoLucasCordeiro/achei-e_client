@@ -1,15 +1,16 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider} from 'react-router-dom'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import './index.css'
+import './index.css';
 
 // rotas
-import Signin from './routes/Signin.tsx'
-import Profile from './routes/Profile.tsx'
-import Home from './routes/Home.tsx'
-import Register from './routes/Register.tsx'
-import NewItem from './routes/NewItem.tsx'
+import Signin from './routes/Signin';
+import Profile from './routes/Profile';
+import Home from './routes/Home';
+import Register from './routes/Register';
+import NewItem from './routes/NewItem';
+import PostDetails from './routes/PostDetails';
 
 const router = createBrowserRouter([
   {
@@ -21,23 +22,25 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
+    path: '/postDetails',
+    element: <PostDetails />,
+  },
+  {
     path: '/profile',
     element: <Profile />,
   },
-
   {
     path: '/register',
     element: <Register />,
   },
-
   {
     path: '/newitem',
     element: <NewItem />,
   },
-])
+]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   </React.StrictMode>,
-)
+);
