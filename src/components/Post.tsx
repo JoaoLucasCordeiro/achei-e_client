@@ -34,7 +34,7 @@ const Post: React.FC<PostProps> = ({ post }: PostProps) => {
         <SideBar />
       </div>
       <div className="flex flex-col items-center justify-center md:w-[60vw] h-screen mb-10 overflow-y-auto">
-        <div className="w-[50vw] flex flex-col p-10 bg-[#ebebeb] rounded-2xl shadow-lg">
+        <div className="sm:w-[50vw] w-[100vw] flex flex-col p-10 bg-[#ebebeb] rounded-2xl shadow-lg">
           <h1 className="text-4xl font-bold text-[#1D8BC9]">{post.item.titulo}</h1>
           <div className="flex items-center justify-center py-5">
             <img src={defaultImage} alt={post.item.titulo} />
