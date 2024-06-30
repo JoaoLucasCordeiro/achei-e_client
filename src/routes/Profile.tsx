@@ -77,7 +77,7 @@ const Profile = () => {
               </div>
             </div>
 
-            <div className="flex items-center justify-center gap-5 mt-10 ">
+            {/* <div className="flex items-center justify-center gap-5 mt-10 ">
               <button className="bg-[#D9D9D9] hover:bg-[#1D8BC9] hover:text-white rounded-3xl p-3 w-[120px] font-bold text-[#5B5B5B] transition-all duration-300">
                 Perdidos
               </button>
@@ -87,13 +87,13 @@ const Profile = () => {
               <button className="bg-[#D9D9D9] hover:bg-[#1D8BC9] hover:text-white rounded-3xl p-3 w-[120px] font-bold text-[#5B5B5B] transition-all duration-300">
                 Editar
               </button>
-            </div>
+            </div> */}
 
-            <div className="flex items-center flex-wrap gap-2 justify-center">
+            {/* <div className="flex items-center flex-wrap gap-2 justify-center">
               <h1 className="text-3xl text-[#1D8BC9] font-bold text-center mt-4">
                 Nenhum post
               </h1>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
