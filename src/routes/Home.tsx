@@ -1,7 +1,7 @@
 import CardPost from "../components/CardPost";
 import SideBar from "../components/SideBar";
 import { useEffect, useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 // imagem default em caso de não ter foto do item
 import defaultImage from "../../public/deafult-img-photo.svg";
@@ -50,6 +50,7 @@ const Home = () => {
         throw new Error("Failed to fetch posts");
       }
       const data = await response.json();
+      console.log(data);
       if (data.length === 0) {
         setHasMore(false); // Não há mais posts para carregar
       } else {
@@ -64,9 +65,7 @@ const Home = () => {
   };
 
   useEffect(() => {
-    fetchPosts(); // Carrega os posts ao montar o componente
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    fetchPosts();
   }, []);
 
   const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
@@ -77,7 +76,7 @@ const Home = () => {
   };
 
   const handleCardClick = (post: Post) => {
-    navigate('/postDetails', { state: { post } });
+    navigate("/postDetails", { state: { post } });
   };
 
   return (
@@ -86,21 +85,25 @@ const Home = () => {
         <SideBar />
       </div>
 
-      <div className="flex flex-col items-center md:w-[60vw] h-screen mb-10 overflow-y-auto" onScroll={handleScroll}>
+      <div
+        className="flex flex-col items-center md:w-[60vw] h-screen mb-10 overflow-y-auto"
+        onScroll={handleScroll}
+      >
         <h1 className="mr-[65%] text-5xl font-bold mt-[3rem]">Home</h1>
         {posts.map((post) => {
           let imageUrl = post.item.foto ? post.item.foto : defaultImage;
-          if (imageUrl.startsWith('/9j/')) {
+          if (imageUrl.startsWith("/9j/")) {
             imageUrl = `data:image/jpeg;base64,${imageUrl}`;
           }
           return (
             <CardPost
-              key={post.dataCriacao}  // Use a data de criação como chave única
+              key={post.dataCriacao} // Use a data de criação como chave única
               imageUrl={imageUrl}
               altText={post.item.titulo}
               title={post.item.titulo}
               description={post.item.descricao}
               lostBy={post.usuario.nome}
+              phone={post.usuario.telefone} // Adiciona o telefone do usuário
               date={post.dataCriacao}
               status={post.item.estado}
               onClick={() => handleCardClick(post)} // Passe o post inteiro para navegação
@@ -112,15 +115,22 @@ const Home = () => {
       </div>
 
       <div className="hidden md:flex md:w-[20vw] border-l-[1px] border-[#1D8BC9]  flex-col items-center">
-        <img src="/logo/logo-acheie.svg" alt="Logo do Achei-e" className="w-[150px] h-[150px]" />
+        <img
+          src="/logo/logo-acheie.svg"
+          alt="Logo do Achei-e"
+          className="w-[150px] h-[150px]"
+        />
 
         <p className="text-base text-black text-center">
           Olá, esse é o <span className="font-bold">Achei-</span>
-          <span className="text-[#1D8BC9] font-bold">e</span> plataforma de achados e perdidos voltada para alunos da
-          UPE campus Garanhuns, para saber mais, clique no botão abaixo.
+          <span className="text-[#1D8BC9] font-bold">e</span> plataforma de
+          achados e perdidos voltada para alunos da UPE campus Garanhuns, para
+          saber mais, clique no botão abaixo.
         </p>
 
-        <button className="text-base p-1 bg-[#1D8BC9] rounded-3xl text-white px-2 mt-2">Saber Mais</button>
+        <button className="text-base p-1 bg-[#1D8BC9] rounded-3xl text-white px-2 mt-2">
+          Saber Mais
+        </button>
       </div>
     </main>
   );

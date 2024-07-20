@@ -192,15 +192,25 @@ const Register = () => {
           </div>
 
           <div className="flex items-center border-b-[1px] border-[#bdbdbd] w-full">
-            <AiOutlineBook size={24} />
-            <input
-              type="text"
-              className="w-full outline-none bg-transparent placeholder:text-gray-300 p-2"
-              placeholder="Qual o seu período?"
-              value={periodo}
-              onChange={(e) => setPeriodo(e.target.value)}
-            />
-          </div>
+  <AiOutlineBook size={24} />
+  <select
+    className="w-full outline-none bg-transparent placeholder:text-gray-300 p-2"
+    value={periodo}
+    onChange={(e) => setPeriodo(e.target.value)}
+  >
+    <option value="">Selecione o seu período</option>
+    <option value="PRIMEIRO">Primeiro</option>
+    <option value="SEGUNDO">Segundo</option>
+    <option value="TERCEIRO">Terceiro</option>
+    <option value="QUARTO">Quarto</option>
+    <option value="QUINTO">Quinto</option>
+    <option value="SEXTO">Sexto</option>
+    <option value="SETIMO">Sétimo</option>
+    <option value="OITAVO">Oitavo</option>
+    <option value="NONO">Nono</option>
+    <option value="DECIMO">Décimo</option>
+  </select>
+</div>
 
           <div className="flex items-center border-b-[1px] border-[#bdbdbd] w-full">
             <AiOutlinePhone size={24} />
