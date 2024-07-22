@@ -38,6 +38,7 @@ const NewItem = () => {
     });
   };
 
+
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {  
     const file = e.target.files ? e.target.files[0] : null;
     if (file) {
@@ -70,7 +71,7 @@ const NewItem = () => {
         categoria: item.categoria,
         descricao: item.descricao,
         titulo: item.titulo,
-        data: item.data,
+        data: item.data, // Keep the date in YYYY-MM-DD format
         foto: item.foto,
       },
     };
@@ -221,10 +222,9 @@ const NewItem = () => {
             <div className="flex items-center border-b-[1px] border-[#bdbdbd] w-full">
               <AiOutlineCalendar size={24} />
               <input
-                type="text"
+                type="date"
                 name="data"
                 className="w-full outline-none placeholder:text-gray-300 p-2 bg-transparent"
-                placeholder="Data"
                 value={item.data}
                 onChange={handleChange}
               />
