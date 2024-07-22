@@ -149,7 +149,7 @@ const NewItem = () => {
                 <option value="">Estado do item</option>
                 <option value="ENCONTRADO">Achado</option>
                 <option value="PERDIDO">Perdido</option>
-                <option value="DEVOLVIDO">Devolvido</option>
+              
               </select>
             </div>
 
