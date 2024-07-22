@@ -246,17 +246,11 @@ const NewItem = () => {
           alt="Logo do Achei-e"
           className="w-[150px] h-[150px]"
         />
-
-        <p className="text-base text-black text-center">
+ <p className="text-base text-black text-center">
           Olá, esse é o <span className="font-bold">Achei-</span>
           <span className="text-[#1D8BC9] font-bold">e</span> plataforma de
-          achados e perdidos voltada para alunos da UPE campus Garanhuns, para
-          saber mais, clique no botão abaixo.
+          achados e perdidos voltada para alunos da UPE campus Garanhuns.
         </p>
-
-        <button className="text-base p-1 bg-[#1D8BC9] rounded-3xl text-white px-2 mt-2">
-          Saber Mais
-        </button>
       </div>
     </main>
   );
